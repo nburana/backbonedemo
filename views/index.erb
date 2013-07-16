@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<script language="javascript" src="https://raw.github.com/andyet/ICanHaz.js/master/ICanHaz.min.js" type="text/javascript"></script>
+		<script language="javascript" src="/underscore.js" type="text/javascript"></script>
+		<script language="javascript" src="/backbone.js" type="text/javascript"></script>
+		<script language="javascript" src="/demo.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<h1>Backbone Demo</h1>
+
+
+		<div id="main">
+		
+			<a href="#!/player/1">Get player 1</a>
+			<a href="#!/players">Get all players</a>
+
+			<div id="renderdata"></div>
+
+			<div id="save" style="color: blue;">Send save request to server</div>
+			<div id="create" style="color: blue;">Send create request to server</div>
+			<div id="destroy" style="color: blue;">Send delete request to server</div>
+
+		</div>
+
+	</body>
+</html>
+
+<script id="viewplayer" type="text/html">
+	<table>
+		<tr>
+			<td>id:</td>
+			<td>{{id}}</td>
+		</tr>
+		<tr>
+			<td>name:</td>
+			<td><input id="name" type="text" value="{{name}}"/></td>
+		</tr>
+	</table>
+</script>
+
+<script id="viewplayers" type="text/html">
+	<table>
+        {{#players}}
+            <tr>
+                <td>id:</td>
+                <td>{{id}}</td>
+            </tr>
+            <tr>
+                <td>name:</td>
+                <td><input id="name" type="text" value="{{name}}"/></td>
+            </tr>
+        {{/players}}
+	</table>
+</script>
